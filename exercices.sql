@@ -23,7 +23,7 @@ select distinct lib_potion from potion join absorber on potion.num_potion = abso
 --12. Liste des habitants (noms) ayant absorbé une potion fabriquée par l'habitant numéro 3. (4 lignes)
 select distinct nom from habitant join absorber on habitant.num_hab = absorber.num_hab join potion on absorber.num_potion = potion.num_potion join fabriquer on potion.num_potion = fabriquer.num_potion where fabriquer.num_hab = 3;
 --13. Liste des habitants (noms) ayant absorbé une potion fabriquée par Amnésix. (7 lignes)
-
+select distinct nom from habitant join absorber on habitant.num_hab = absorber.num_hab join potion on absorber.num_potion = potion.num_potion join fabriquer on potion.num_potion = fabriquer.num_potion where fabriquer.num_hab = 2;
 --14. Nom des habitants dont la qualité n'est pas renseignée. (2 lignes)
 
 --15. Nom des habitants ayant consommé la Potion magique n°1 (c'est le libellé de lapotion) en février 52. (3 lignes)

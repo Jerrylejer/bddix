@@ -29,7 +29,7 @@ select nom from habitant where num_qualite is null;
 --15. Nom des habitants ayant consommé la Potion magique n°1 (c'est le libellé de lapotion) en février 52. (3 lignes)
 select nom from habitant join absorber on habitant.num_hab = absorber.num_hab where absorber.num_potion = 1 and absorber.date_a between '2052-02-01' and '2052-02-28';
 --16. Nom et âge des habitants par ordre alphabétique. (22 lignes)
-
+select nom, age from habitant order by nom;
 --17. Liste des resserres classées de la plus grande à la plus petite : nom de resserre et nom du village. (3 lignes)
 
 --***

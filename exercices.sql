@@ -15,7 +15,7 @@ select * from trophee;
 --8. Nom des habitants qui habitent à Aquilona. (7 lignes)
 select * from habitant join village on habitant.num_village = village.num_village and village.nom_village = 'Aquilona';
 --9. Nom des habitants ayant pris des trophées de catégorie Bouclier de Légat. (2 lignes)
-
+select nom from habitant join trophee on habitant.num_hab = trophee.num_preneur where code_cat = 'BLT';
 --10. Liste des potions (libellés) fabriquées par Panoramix : libellé, formule et constituantprincipal. (3 lignes)
 
 --11. Liste des potions (libellés) absorbées par Homéopatix. (2 lignes)

@@ -18,9 +18,8 @@ select * from habitant join village on habitant.num_village = village.num_villag
 select nom from habitant join trophee on habitant.num_hab = trophee.num_preneur where code_cat = 'BLT';
 --10. Liste des potions (libellés) fabriquées par Panoramix : libellé, formule et constituantprincipal. (3 lignes)
 select distinct lib_potion, formule, constituant_principal from potion join fabriquer on potion.num_potion = fabriquer.num_potion join habitant on fabriquer.num_hab = habitant.num_hab where nom = 'Panoramix';
-
 --11. Liste des potions (libellés) absorbées par Homéopatix. (2 lignes)
-
+select distinct lib_potion from potion join absorber on potion.num_potion = absorber.num_potion join habitant on absorber.num_hab = habitant.num_hab where nom = 'Homéopatix';
 --12. Liste des habitants (noms) ayant absorbé une potion fabriquée par l'habitant numéro 3. (4 lignes)
 
 --13. Liste des habitants (noms) ayant absorbé une potion fabriquée par Amnésix. (7 lignes)

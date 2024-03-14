@@ -1,5 +1,5 @@
 --1. Liste des potions : Numéro, libellé, formule et constituant principal. (5 lignes)
-
+select * from potion;
 --2. Liste des noms des trophées rapportant 3 points. (2 lignes)
 
 --3. Liste des villages (noms) contenant plus de 35 huttes. (4 lignes)

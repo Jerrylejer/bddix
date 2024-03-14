@@ -9,7 +9,7 @@ select num_trophee from trophee where date_prise between '2052-05-01' and '2052-
 --5. Noms des habitants commençant par 'a' et contenant la lettre 'r'. (3 lignes)
 select nom from habitant where nom like 'A%r%';
 --6. Numéros des habitants ayant bu les potions numéros 1, 3 ou 4. (8 lignes)
-
+select distinct nom from habitant join absorber on habitant.num_hab = absorber.num_hab where num_potion in (1, 3, 4);
 --7. Liste des trophées : numéro, date de prise, nom de la catégorie et nom du preneur. (10lignes)
 
 --8. Nom des habitants qui habitent à Aquilona. (7 lignes)

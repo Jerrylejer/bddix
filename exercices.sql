@@ -17,6 +17,7 @@ select * from habitant join village on habitant.num_village = village.num_villag
 --9. Nom des habitants ayant pris des trophées de catégorie Bouclier de Légat. (2 lignes)
 select nom from habitant join trophee on habitant.num_hab = trophee.num_preneur where code_cat = 'BLT';
 --10. Liste des potions (libellés) fabriquées par Panoramix : libellé, formule et constituantprincipal. (3 lignes)
+select distinct lib_potion, formule, constituant_principal from potion join fabriquer on potion.num_potion = fabriquer.num_potion join habitant on fabriquer.num_hab = habitant.num_hab where nom = 'Panoramix';
 
 --11. Liste des potions (libellés) absorbées par Homéopatix. (2 lignes)
 

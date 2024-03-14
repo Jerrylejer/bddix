@@ -3,7 +3,7 @@ select * from potion;
 --2. Liste des noms des trophées rapportant 3 points. (2 lignes)
 
 --3. Liste des villages (noms) contenant plus de 35 huttes. (4 lignes)
-
+select nom_village from village where nb_huttes > 35;
 --4. Liste des trophées (numéros) pris en mai / juin 52. (4 lignes)
 
 --5. Noms des habitants commençant par 'a' et contenant la lettre 'r'. (3 lignes)

@@ -5,7 +5,7 @@ select * from potion;
 --3. Liste des villages (noms) contenant plus de 35 huttes. (4 lignes)
 select nom_village from village where nb_huttes > 35;
 --4. Liste des trophées (numéros) pris en mai / juin 52. (4 lignes)
-
+select num_trophee from trophee where date_prise between '2052-05-01' and '2052-06-30';
 --5. Noms des habitants commençant par 'a' et contenant la lettre 'r'. (3 lignes)
 
 --6. Numéros des habitants ayant bu les potions numéros 1, 3 ou 4. (8 lignes)

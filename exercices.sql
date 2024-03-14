@@ -31,7 +31,7 @@ select nom from habitant join absorber on habitant.num_hab = absorber.num_hab wh
 --16. Nom et âge des habitants par ordre alphabétique. (22 lignes)
 select nom, age from habitant order by nom;
 --17. Liste des resserres classées de la plus grande à la plus petite : nom de resserre et nom du village. (3 lignes)
-
+select nom_resserre, village.nom_village from resserre join village on resserre.num_village = village.num_village order by resserre.superficie;
 --***
 
 --18. Nombre d'habitants du village numéro 5. (4)

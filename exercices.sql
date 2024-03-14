@@ -13,7 +13,7 @@ select distinct nom from habitant join absorber on habitant.num_hab = absorber.n
 --7. Liste des trophées : numéro, date de prise, nom de la catégorie et nom du preneur. (10lignes)
 select * from trophee;
 --8. Nom des habitants qui habitent à Aquilona. (7 lignes)
-
+select * from habitant join village on habitant.num_village = village.num_village and village.nom_village = 'Aquilona';
 --9. Nom des habitants ayant pris des trophées de catégorie Bouclier de Légat. (2 lignes)
 
 --10. Liste des potions (libellés) fabriquées par Panoramix : libellé, formule et constituantprincipal. (3 lignes)

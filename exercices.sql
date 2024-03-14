@@ -21,7 +21,7 @@ select distinct lib_potion, formule, constituant_principal from potion join fabr
 --11. Liste des potions (libellés) absorbées par Homéopatix. (2 lignes)
 select distinct lib_potion from potion join absorber on potion.num_potion = absorber.num_potion join habitant on absorber.num_hab = habitant.num_hab where nom = 'Homéopatix';
 --12. Liste des habitants (noms) ayant absorbé une potion fabriquée par l'habitant numéro 3. (4 lignes)
-
+select distinct nom from habitant join absorber on habitant.num_hab = absorber.num_hab join potion on absorber.num_potion = potion.num_potion join fabriquer on potion.num_potion = fabriquer.num_potion where fabriquer.num_hab = 3;
 --13. Liste des habitants (noms) ayant absorbé une potion fabriquée par Amnésix. (7 lignes)
 
 --14. Nom des habitants dont la qualité n'est pas renseignée. (2 lignes)

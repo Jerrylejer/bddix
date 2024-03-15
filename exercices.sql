@@ -11,7 +11,7 @@ select nom from habitant where nom like 'A%r%';
 --6. Numéros des habitants ayant bu les potions numéros 1, 3 ou 4. (8 lignes)
 select distinct nom from habitant join absorber on habitant.num_hab = absorber.num_hab where num_potion in (1, 3, 4);
 --7. Liste des trophées : numéro, date de prise, nom de la catégorie et nom du preneur. (10lignes)
-select * from trophee;
+select * from trophee; // pas bon
 --8. Nom des habitants qui habitent à Aquilona. (7 lignes)
 select * from habitant join village on habitant.num_village = village.num_village and village.nom_village = 'Aquilona';
 --9. Nom des habitants ayant pris des trophées de catégorie Bouclier de Légat. (2 lignes)
@@ -35,7 +35,7 @@ select nom_resserre, village.nom_village from resserre join village on resserre.
 --***
 
 --18. Nombre d'habitants du village numéro 5. (4)
-
+select COUNT(*) from habitant join village on habitant.num_village = village.num_village where village.num_village = 5;
 --19. Nombre de points gagnés par Goudurix. (5)
 
 --20. Date de première prise de trophée. (03/04/52)

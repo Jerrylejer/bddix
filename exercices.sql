@@ -53,7 +53,7 @@ select habitant.nom , count(num_preneur) as nombre_de_trophees from trophee join
 --25. Moyenne d'âge des habitants par province (nom de province, calcul). (3 lignes)
 select province.nom_province as nom_de_province, avg(age) as calcul from habitant join village on habitant.num_village = village.num_village join province on village.num_province = province.num_province group by province.nom_province;
 --26. Nombre de potions différentes absorbées par chaque habitant (nom et nombre). (9lignes)
-
+select habitant.nom, count(lib_potion) as nombre from potion join absorber on potion.num_potion = absorber.num_potion join habitant on absorber.num_hab = habitant.num_hab group by habitant.nom;
 
 --27. Nom des habitants ayant bu plus de 2 louches de potion zen. (1 ligne)
 

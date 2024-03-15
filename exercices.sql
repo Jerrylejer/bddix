@@ -43,7 +43,7 @@ select TO_CHAR(date_prise , 'DD/MM/YY') AS formatted_date from trophee limit 1 o
 --21. Nombre de louches de Potion magique n°2 (c'est le libellé de la potion) absorbées. (19)
 select sum(quantite) from absorber where absorber.num_potion = 2;
 --22. Superficie la plus grande. (895)
-
+select max(superficie) from resserre;
 --***
 
 --23. Nombre d'habitants par village (nom du village, nombre). (7 lignes)

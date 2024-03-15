@@ -37,7 +37,7 @@ select nom_resserre, village.nom_village from resserre join village on resserre.
 --18. Nombre d'habitants du village numéro 5. (4)
 select COUNT(*) from habitant join village on habitant.num_village = village.num_village where village.num_village = 5;
 --19. Nombre de points gagnés par Goudurix. (5)
-
+select SUM(nb_points) from categorie join trophee on categorie.code_cat = trophee.code_cat join habitant on trophee.num_preneur = habitant.num_hab where habitant.nom = 'Goudurix';
 --20. Date de première prise de trophée. (03/04/52)
 
 --21. Nombre de louches de Potion magique n°2 (c'est le libellé de la potion) absorbées. (19)

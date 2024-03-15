@@ -51,7 +51,7 @@ select village.nom_village, count(*) as nombre from habitant join village on hab
 --24. Nombre de trophées par habitant (6 lignes)
 select habitant.nom , count(num_preneur) as nombre_de_trophees from trophee join habitant on trophee.num_preneur = habitant.num_hab group by habitant.nom;
 --25. Moyenne d'âge des habitants par province (nom de province, calcul). (3 lignes)
-
+select province.nom_province as nom_de_province, avg(age) as calcul from habitant join village on habitant.num_village = village.num_village join province on village.num_province = province.num_province group by province.nom_province;
 --26. Nombre de potions différentes absorbées par chaque habitant (nom et nombre). (9lignes)
 
 

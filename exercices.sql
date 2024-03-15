@@ -41,7 +41,7 @@ select SUM(nb_points) from categorie join trophee on categorie.code_cat = trophe
 --20. Date de première prise de trophée. (03/04/52)
 select TO_CHAR(date_prise , 'DD/MM/YY') AS formatted_date from trophee limit 1 offset 1;
 --21. Nombre de louches de Potion magique n°2 (c'est le libellé de la potion) absorbées. (19)
-
+select sum(quantite) from absorber where absorber.num_potion = 2;
 --22. Superficie la plus grande. (895)
 
 --***

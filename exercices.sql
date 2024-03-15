@@ -39,7 +39,7 @@ select COUNT(*) from habitant join village on habitant.num_village = village.num
 --19. Nombre de points gagnés par Goudurix. (5)
 select SUM(nb_points) from categorie join trophee on categorie.code_cat = trophee.code_cat join habitant on trophee.num_preneur = habitant.num_hab where habitant.nom = 'Goudurix';
 --20. Date de première prise de trophée. (03/04/52)
-
+select TO_CHAR(date_prise , 'DD/MM/YY') AS formatted_date from trophee limit 1 offset 1;
 --21. Nombre de louches de Potion magique n°2 (c'est le libellé de la potion) absorbées. (19)
 
 --22. Superficie la plus grande. (895)

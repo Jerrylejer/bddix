@@ -11,7 +11,7 @@ select nom from habitant where nom like 'A%r%';
 --6. Numéros des habitants ayant bu les potions numéros 1, 3 ou 4. (8 lignes)
 select distinct nom from habitant join absorber on habitant.num_hab = absorber.num_hab where num_potion in (1, 3, 4);
 --7. Liste des trophées : numéro, date de prise, nom de la catégorie et nom du preneur. (10lignes)
-select * from trophee; // pas bon
+select num_trophee, date_prise, categorie.nom_categ, habitant.nom from trophee join categorie on trophee.code_cat = categorie.code_cat join habitant on trophee.num_preneur = habitant.num_hab ;
 --8. Nom des habitants qui habitent à Aquilona. (7 lignes)
 select * from habitant join village on habitant.num_village = village.num_village and village.nom_village = 'Aquilona';
 --9. Nom des habitants ayant pris des trophées de catégorie Bouclier de Légat. (2 lignes)

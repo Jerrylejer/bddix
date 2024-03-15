@@ -47,7 +47,7 @@ select max(superficie) from resserre;
 --***
 
 --23. Nombre d'habitants par village (nom du village, nombre). (7 lignes)
-
+select village.nom_village, count(*) as nombre from habitant join village on habitant.num_village = village.num_village group by village.nom_village;
 --24. Nombre de trophées par habitant (6 lignes)
 
 --25. Moyenne d'âge des habitants par province (nom de province, calcul). (3 lignes)

@@ -64,4 +64,4 @@ select nom_village from village join resserre on village.num_village = resserre.
 --29. Nom du village contenant le plus grand nombre de huttes. (Gergovie)
 select nom_village from village order by nb_huttes desc limit 1;
 --30. Noms des habitants ayant pris plus de trophées qu'Obélix (3 lignes).
-
+select distinct nom from habitant join trophee on habitant.num_hab = trophee.num_preneur group by habitant.nom having count(trophee.num_preneur) > 1;

@@ -83,7 +83,7 @@ select province.nom_province as nom_de_province, avg(age) as age_moyen_habitant 
 select habitant.nom, count(lib_potion) as nombre_potions_differentes_bues from potion join absorber on potion.num_potion = absorber.num_potion join habitant on absorber.num_hab = habitant.num_hab group by habitant.nom;
 
 --27. Nom des habitants ayant bu plus de 2 louches de potion zen. (1 ligne)
-select nom as bu_plus_de_2_louches_potion_Zen from habitant join absorber on habitant.num_hab = absorber.num_hab join potion on absorber.num_potion = potion.num_potion where potion.lib_potion = 'Potion Zen' and absorber.quantite > 2; 
+select nom as hab_ayant_bu_plus_de_2_louches_potion_Zen from habitant join absorber on habitant.num_hab = absorber.num_hab join potion on absorber.num_potion = potion.num_potion where potion.lib_potion = 'Potion Zen' and absorber.quantite > 2; 
 
 --***
 --28. Noms des villages dans lesquels on trouve une resserre (3 lignes)

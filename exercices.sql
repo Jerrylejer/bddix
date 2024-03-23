@@ -92,5 +92,7 @@ select nom_village as villages_avec_resserre from village join resserre on villa
 --29. Nom du village contenant le plus grand nombre de huttes. (Gergovie)
 select nom_village as village_avec_plus_de_huttes from village order by nb_huttes desc limit 1;
 
---30. Noms des habitants ayant pris plus de trophées qu'Obélix (3 lignes)=> Je n'y arrive pas par le nom.
+--30. Noms des habitants ayant pris plus de trophées qu'Obélix (3 lignes)=> Sans aide => je n'y arrive pas par le nom. Seconde requête grâce à entraide
 select distinct nom from habitant join trophee on habitant.num_hab = trophee.num_preneur group by habitant.nom having count(trophee.num_preneur) > 1;
+select nom from habitant join trophee on habitant.num_hab = trophee.num_preneur group by habitant.num_hab, habitant.nom having count(trophee.num_trophee) > (select count(*) from trophee where num_preneur = (select num_hab from habitant where nom = 'Obélix'));
+

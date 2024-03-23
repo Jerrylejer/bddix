@@ -38,7 +38,7 @@ select distinct lib_potion as potion_absorbees_par_Homeopatix  from potion join 
 select distinct nom as habitants_ayant_bu_potions_fabriquees_par_habitant_3 from habitant join absorber on habitant.num_hab = absorber.num_hab join potion on absorber.num_potion = potion.num_potion join fabriquer on potion.num_potion = fabriquer.num_potion where fabriquer.num_hab = 3;
 
 --13. Liste des habitants (noms) ayant absorbé une potion fabriquée par Amnésix. (7 lignes)
-select distinct habitant.nom from habitant join absorber on habitant.num_hab = absorber.num_hab join fabriquer on absorber.num_potion = fabriquer.num_potion join habitant hab on fabriquer.num_hab = hab.num_hab where hab.nom = 'Amnésix';
+select distinct habitant.nom as habitants_ayant_bu_potion_amnesix from habitant join absorber on habitant.num_hab = absorber.num_hab join fabriquer on absorber.num_potion = fabriquer.num_potion join habitant hab on fabriquer.num_hab = hab.num_hab where hab.nom = 'Amnésix';
 
 --14. Nom des habitants dont la qualité n'est pas renseignée. (2 lignes)
 select nom as Habitants_sans_qualité from habitant where num_qualite is null;

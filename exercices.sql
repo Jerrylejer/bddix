@@ -20,7 +20,7 @@ select distinct num_hab as Num_des_habitants_ayant_bu_les_potions_1_3_ou_4 from 
 select distinct nom as Noms_des_habitants_ayant_bu_les_potions_1_3_ou_4 from habitant join absorber on habitant.num_hab = absorber.num_hab where num_potion in (1, 3, 4);
 
 --7. Liste des trophées : numéro, date de prise, nom de la catégorie et nom du preneur. (10lignes)
-select num_trophee, date_prise, categorie.nom_categ, habitant.nom from trophee join categorie on trophee.code_cat = categorie.code_cat join habitant on trophee.num_preneur = habitant.num_hab;
+select num_trophee, TO_CHAR(date_prise , 'DD/MM/YY') as date_prise, categorie.nom_categ, habitant.nom from trophee join categorie on trophee.code_cat = categorie.code_cat join habitant on trophee.num_preneur = habitant.num_hab;
 
 --8. Nom des habitants qui habitent à Aquilona. (7 lignes)
 select nom as habitants_de_Aquilna from habitant join village on habitant.num_village = village.num_village and village.nom_village = 'Aquilona';
